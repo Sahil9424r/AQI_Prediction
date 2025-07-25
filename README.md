@@ -39,6 +39,7 @@ This project predicts the **Air Quality Index (AQI)** using a machine learning m
 
 ### 🔹 Input Form  
 ![Input Form](AQIpic/Screenshot%20(372).png)
-
+### 🔹Entering Inputs  
+![Input Form](AQIpic/Screenshot%20(374).png)
 ### 🔹 Prediction Result  
 ![Prediction Result](AQIpic/Screenshot%20(373).png)
