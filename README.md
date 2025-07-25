@@ -36,7 +36,7 @@ This project predicts the **Air Quality Index (AQI)** using a machine learning m
 - **Flask** *(used only to run the local form interface)*
 
 ### 🔹 Input Form  
-![Input Form](Chatbotpic/aqi_input.png)
+![Input Form](AQIpic/Screenshot (372).png)
 
 ### 🔹 Prediction Result  
-![Prediction Result](Chatbotpic/aqi_result.png)
+![Prediction Result](AQIpic/Screenshot (373).png)
