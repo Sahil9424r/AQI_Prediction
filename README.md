@@ -34,9 +34,11 @@ This project predicts the **Air Quality Index (AQI)** using a machine learning m
 - **NumPy**
 - **Scikit-learn**
 - **Flask** *(used only to run the local form interface)*
+- 
+## 📸 Screenshots
 
 ### 🔹 Input Form  
-![Input Form](AQIpic/Screenshot (372).png)
+![Input Form](AQIpic/Screenshot%20(372).png)
 
 ### 🔹 Prediction Result  
-![Prediction Result](AQIpic/Screenshot (373).png)
+![Prediction Result](AQIpic/Screenshot%20(373).png)
