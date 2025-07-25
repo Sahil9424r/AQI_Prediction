@@ -1,24 +1,35 @@
-# 🌫️ AQI Prediction
+# 🌫️ AQI Prediction using Machine Learning
 
-This project predicts the Air Quality Index (AQI) using a trained machine learning model and provides a simple web interface via a Flask application.
+This project predicts the **Air Quality Index (AQI)** using a machine learning model trained on pollution data. A basic Flask interface is used to input values and get predictions.
 
-## 🧠 Model Details
+## 📌 Project Goal
 
-- **Model Used**: Random Forest Regressor
-- **Input Features**:  
-  - CO (Carbon Monoxide)  
-  - NO2 (Nitrogen Dioxide)  
-  - PM2.5 (Particulate Matter 2.5)  
-  - PM10 (Particulate Matter 10)  
-  - O3 (Ozone)  
+To build an ML model that takes air pollutant values like CO, NO2, PM2.5, etc., and predicts the AQI (Air Quality Index).
+
+## 🧠 Machine Learning Model
+
+- **Algorithm**: Random Forest Regressor  
+- **Target**: AQI  
+- **Features Used**:
+  - CO (Carbon Monoxide)
+  - NO2 (Nitrogen Dioxide)
+  - PM2.5
+  - PM10
+  - O3 (Ozone)
   - SO2 (Sulfur Dioxide)
-- **Output**: Predicted AQI Value
-- **Trained Model File**: `model.pkl`
+- **Model File**: `model.pkl`
 
-## 📸 Screenshots
+## 💻 Tech Stack
+
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Scikit-learn**
+- **Flask** (only for running a local form-based app)
 
 ### 🔹 Input Form  
-![Input Form](aqi_input.png)
+![Input Form](Chatbotpic/aqi_input.png)
 
 ### 🔹 Prediction Result  
-![Prediction Result](aqi_result.png)
+![Prediction Result](Chatbotpic/aqi_result.png)
+
