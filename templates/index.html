@@ -1,43 +1,57 @@
 <!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="{{ url_for('static',filename='style.css')}}">
   <meta charset="UTF-8">
-  <title>air quality index</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-
-
+  <title>Air Quality Index</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
 </head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen flex items-center justify-center text-white font-sans">
 
-<body>
- <div class="login">
-	<h1><strong>Air Quality Index</strong></h1>
+  <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl p-8 w-full max-w-md">
+    <h1 class="text-3xl font-bold text-center mb-6 text-white font-[Pacifico]">Air Quality Index</h1>
 
-     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict') }}" method="post" class="space-y-5">
+      
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="PM2.5">PM2.5 (0.1 - 160)</label>
+        <input type="number" step="any" name="PM2.5" required
+               class="w-full px-4 py-2 rounded-md bg-white/20 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      </div>
 
-    <form action="{{ url_for('predict')}}"method="post">
-    <p style="text-align: left"><small> <b>PM2.5</b> (Usually ranges from 0.1 to 160)</small></p>
-    <input type="number" step="any" placeholder="Enter Value" name = "PM2.5" required="required">
-     <p style="text-align: left"><small> <b>NO2</b> (Usually ranges from 0.01 to 80)</small></p>
-    <input type="number"  step="any" placeholder="Enter Value" name="NO2" required="required">
-     <p style="text-align: left"><small> <b>CO</b>  (Usually ranges from 0 to 3) </small></p>
-    <input type="number"  step="any"  placeholder="Enter Value" name="CO" required="required">
-     <p style="text-align: left"><small> <b>SO2</b> (Usually ranges from 0.01 to 30)</small></p>
-    <input type="number"  step="any"   placeholder="Enter Value" name="SO2" required="required">
-     <p style="text-align: left"><small> <b>O3</b>  (Usually ranges from 0.01 to 85)</small></p>
-    <input type="number"  step="any" placeholder="Enter Value" name="O3" required="required">
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="NO2">NO2 (0.01 - 80)</label>
+        <input type="number" step="any" name="NO2" required
+               class="w-full px-4 py-2 rounded-md bg-white/20 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      </div>
 
-    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="CO">CO (0 - 3)</label>
+        <input type="number" step="any" name="CO" required
+               class="w-full px-4 py-2 rounded-md bg-white/20 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      </div>
 
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="SO2">SO2 (0.01 - 30)</label>
+        <input type="number" step="any" name="SO2" required
+               class="w-full px-4 py-2 rounded-md bg-white/20 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold mb-1" for="O3">O3 (0.01 - 85)</label>
+        <input type="number" step="any" name="O3" required
+               class="w-full px-4 py-2 rounded-md bg-white/20 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      </div>
+
+      <button type="submit"
+              class="w-full bg-cyan-500 hover:bg-cyan-600 transition duration-200 text-white font-semibold py-2 rounded-md mt-4 shadow-md">
+        Predict
+      </button>
     </form>
-
-
- </div>
-
+  </div>
 
 </body>
 </html>
