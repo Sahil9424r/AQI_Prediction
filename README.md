@@ -1,16 +1,22 @@
 # 🌫️ AQI Prediction using Machine Learning
 
-This project predicts the **Air Quality Index (AQI)** using a machine learning model trained on pollution data. A basic Flask interface is used to input values and get predictions.
+This project predicts the **Air Quality Index (AQI)** using a machine learning model trained on pollution data from Indian cities. A simple Flask interface is used to input pollutant values and get the predicted AQI.
 
-## 📌 Project Goal
+---
 
-To build an ML model that takes air pollutant values like CO, NO2, PM2.5, etc., and predicts the AQI (Air Quality Index).
+## 📊 Dataset Used
+
+- **Source**: [Air Quality Data in India – Kaggle](https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india)  
+- **File Used**: `city_day.csv`  
+- **Description**: Contains daily air quality data from multiple cities in India, including values for PM2.5, PM10, NO2, SO2, CO, O3, and calculated AQI.
+
+---
 
 ## 🧠 Machine Learning Model
 
 - **Algorithm**: Random Forest Regressor  
 - **Target**: AQI  
-- **Features Used**:
+- **Input Features**:
   - CO (Carbon Monoxide)
   - NO2 (Nitrogen Dioxide)
   - PM2.5
@@ -19,17 +25,18 @@ To build an ML model that takes air pollutant values like CO, NO2, PM2.5, etc., 
   - SO2 (Sulfur Dioxide)
 - **Model File**: `model.pkl`
 
+---
+
 ## 💻 Tech Stack
 
 - **Python**
 - **Pandas**
 - **NumPy**
 - **Scikit-learn**
-- **Flask** (only for running a local form-based app)
+- **Flask** *(used only to run the local form interface)*
 
 ### 🔹 Input Form  
 ![Input Form](Chatbotpic/aqi_input.png)
 
 ### 🔹 Prediction Result  
 ![Prediction Result](Chatbotpic/aqi_result.png)
-
